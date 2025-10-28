@@ -1,0 +1,12 @@
+When a redirection happens in a normal html page, the whole page re-renders
+
+But in the react-router the whole page will not be re-rendered
+
+
+To install react-router dom
+npm install react-router-dom
+
+
+'rafce' is shortcut to create the boiler code tempalte
+rafce - React Arrow Function Component Export
+https://github.com/r5n-labs/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md

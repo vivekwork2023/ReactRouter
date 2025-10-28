@@ -1,10 +1,14 @@
 *{
-  margin : 0;
-  padding: 0;
+  margin : 5px;
+  padding: 5px;
   box-sizing: border-box;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 a{
   text-decoration:none;
   color:red;
+}
+.logo-img {
+  width: 100px; /* or any size you prefer */
+  height: auto; /* maintains aspect ratio */
 }
