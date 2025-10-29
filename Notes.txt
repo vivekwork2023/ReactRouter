@@ -35,3 +35,4 @@ But when we use the NavLink in the Navbar, there is something new added to these
   <li><a class="" href="/products" data-discover="true">Products</a></li>
 </ul>
 we can observe, class is added to all the 'a' tags and we can see which tag is active
+so, now I can add a.active in the css files
