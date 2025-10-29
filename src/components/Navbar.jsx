@@ -1,24 +1,25 @@
 import React from 'react';
 import logo from '../assets/vite.svg';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <div className='navbar'>
         <img src={logo} alt='A log page' className='logo-img'/>
         <ul>
-          <Link to={'/about'}>
+          <NavLink to={'/about'}>
             <li>About</li>
-          </Link>
-          <Link to={'/contact'}>
+          </NavLink>
+          <NavLink to={'/contact'}>
             <li>Contact</li>
-          </Link>
-          <Link to={'/'}>
+          </NavLink>
+          <NavLink to={'/'}>
             <li>Home</li>
-          </Link>
-          <Link to={'/products'}>
+          </NavLink>
+          <NavLink to={'/products'}>
             <li>Products</li>
-          </Link>
+          </NavLink>
         </ul>
         <button>Get Started</button>
     </div>

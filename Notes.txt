@@ -13,4 +13,25 @@ https://github.com/r5n-labs/vscode-react-javascript-snippets/blob/HEAD/docs/Snip
 
 
 So all the paths when a button is clicked is defined in the NavBar
-Once the path is defined, where that path takes is written in the router
+Once the path is defined, where that path takes is written in the router. If you do not define this, then it will just update in the url but no redirections happen
+
+
+Now we can look into the difference between the Nav and link
+
+
+when we are using the Link tag, all the Link components are converted to anchor tags, and they look like
+<ul>
+  <li><a href="/about" data-discover="true">About</a></li>
+  <li><a href="/contact" data-discover="true">Contact</a></li>
+  <li><a href="/" data-discover="true">Home</a></li>
+  <li><a href="/products" data-discover="true">Products</a></li>
+</ul>
+
+But when we use the NavLink in the Navbar, there is something new added to these a tags
+<ul>
+  <li><a class="" href="/about" data-discover="true">About</a></li>
+  <li><a class="" href="/contact" data-discover="true">Contact</a></li>
+  <li><a class="active" href="/" data-discover="true" aria-current="page">Home</a></li>
+  <li><a class="" href="/products" data-discover="true">Products</a></li>
+</ul>
+we can observe, class is added to all the 'a' tags and we can see which tag is active
