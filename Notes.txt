@@ -36,3 +36,19 @@ But when we use the NavLink in the Navbar, there is something new added to these
 </ul>
 we can observe, class is added to all the 'a' tags and we can see which tag is active
 so, now I can add a.active in the css files
+
+
+When evere we need to use on click submission and how they should be redirecting, we can start using useNavigate()
+
+<button onClick={() => {navigate('/about', {replace:true})}}>Get Started</button>
+Whenever we use the replace=true, when clicked on the this button, then when we click back, it will not go to previous page,
+because we are replacing the the last page visited navigation stack with this.
+Browser somehow stores the pages visited in a stack, but we use {replace:true}, it is not getting added but rather is totally repalcing the page from which it is loading
+
+let say we started the app and we navigated like
+home -> products -> about  -> in this case when we click back the order is
+about-> products -> Home
+
+But if it is like
+home ->contact ->products -> Get started, the back click is
+Get Started -> contact -> home ( products page in the stack is replaced by the getstarted)
