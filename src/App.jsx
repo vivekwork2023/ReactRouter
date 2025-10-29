@@ -1,30 +1,35 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import { Routes, Route } from 'react-router-dom';
+import {  Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import Products from './pages/Products';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import RootLayout from './layout/RootLayout';
 
 const App = () => {
-  return (<div>
-    Hello there
-    <Navbar />
-    <div>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        {/* The default page that will be loaded, becuase it is checking the url and checking which of these paths are present */}
 
-        <Route path='/products' element={<Products />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
-      </Routes>
-    </div>
-    {/* so from the main header when the web loads, this page will be shown as the first page.
-    so when, we add any of these paths to the main URL,then it will redirect. 
-    Like http://localhost:5173 -> http://localhost:5173/contact will open component Contact along with the Navbar */}
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path='/' element={<RootLayout />}>
+        <Route index element={<Home />} />
+        {/* this index does not work until we include the {Outlet} in the RootLayout.
+        When ever this renders, first it renders the RootLayout and then the rest */}
 
-  </div>);
+        <Route path='products' element={<Products />} />
+        {/* so in here first the / is checked and later all these paths are checkedd */}
+
+        <Route path='about' element={<About />} />
+
+        <Route path='contact' element={<Contact />} />
+      </Route>
+    )
+  );
+
+  return (
+    <RouterProvider router={router}/>
+  );
+  
 }
 
 export default App;

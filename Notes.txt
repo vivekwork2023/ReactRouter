@@ -10,3 +10,7 @@ npm install react-router-dom
 'rafce' is shortcut to create the boiler code tempalte
 rafce - React Arrow Function Component Export
 https://github.com/r5n-labs/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md
+
+
+So all the paths when a button is clicked is defined in the NavBar
+Once the path is defined, where that path takes is written in the router

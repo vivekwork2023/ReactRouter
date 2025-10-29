@@ -6,7 +6,6 @@ import { BrowserRouter } from 'react-router-dom'
 // we need this to get enable the routing
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
     <App />
-  </BrowserRouter>,
+  // since we are using RouterProvider, this BrowserRouter should be removed
 )
