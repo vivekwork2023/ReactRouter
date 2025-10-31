@@ -52,3 +52,16 @@ about-> products -> Home
 But if it is like
 home ->contact ->products -> Get started, the back click is
 Get Started -> contact -> home ( products page in the stack is replaced by the getstarted)
+
+
+We can start a local server with the json data that we have.
+After creating the data.json, right click on the assets folder and select open intergrated terminal
+Then the terminal opens with the folder path in it.
+Then type
+ npx json-server --watch data.json --port 5000
+                        (file name)        (any port number of wish)
+
+Then it will start a server with port 5000 with end point as jobs
+
+
+

@@ -1,0 +1,34 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Software Engineer",
+      "salary": "₹12,00,000",
+      "location": "Bengaluru, India"
+    },
+    {
+      "id": 2,
+      "title": "Data Analyst",
+      "salary": "₹8,50,000",
+      "location": "Hyderabad, India"
+    },
+    {
+      "id": 3,
+      "title": "Product Manager",
+      "salary": "₹18,00,000",
+      "location": "Mumbai, India"
+    },
+    {
+      "id": 4,
+      "title": "UX Designer",
+      "salary": "₹10,00,000",
+      "location": "Pune, India"
+    },
+    {
+      "id": 5,
+      "title": "DevOps Engineer",
+      "salary": "₹14,50,000",
+      "location": "Chennai, India"
+    }
+  ]
+}
