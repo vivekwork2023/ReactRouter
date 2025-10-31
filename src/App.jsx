@@ -12,6 +12,7 @@ import ContactForm from './components/ContactForm';
 import NotFound from './components/NotFound';
 import JobsLayout from './layout/JobsLayout';
 import Job, { jobLoader } from './pages/Job';
+import JobDetails, { JobDetailsLoader } from './components/JobDetails';
 
 const App = () => {
 
@@ -35,6 +36,9 @@ const App = () => {
         <Route path='jobs' element = {<JobsLayout/>}>
           {/* before loading the job, we need to fetch the data from API */}
           <Route index element={<Job/>} loader={jobLoader} />
+
+          <Route path=':id' element={<JobDetails/>} loader ={JobDetailsLoader} />
+          {/* this : is responsible for the loader to understand that this a url parameter */}
         </Route>
 
         <Route path='*' element= {<NotFound /> }/>

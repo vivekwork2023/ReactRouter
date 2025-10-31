@@ -4,6 +4,8 @@ import { useLoaderData } from 'react-router-dom'
 const Job = () => {
 
     const jobsdata = useLoaderData();
+    // The data is getting loaded from the loader attribute
+    //   <Route index element={<Job/>} loader={jobLoader} />
 
     return (
         <div>
